@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            <h1>{% trans "Plus de details"%}</h1>
+        </div>
+        <div class="card-body mb-5">
+        <h5 class="card-title mt-5 ">{{article.title}}</h5>
+        <p class="card-text mt-5 mb-5">{{article.content}}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">{% trans "Retour" %}</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+        {{article.publication_date|timesince}}
+        </div>
+    </div>
+    
+{% endblock %}

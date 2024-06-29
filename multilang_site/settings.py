@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-i_r=1^g2-g$$s)5(ew^mw07$@^h5+x3y74!i1h1*qa=80q(#ja
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"] #Ajout des noms de domaines
 
 
 # Application definition
@@ -85,6 +85,7 @@ DATABASES = {
     }
 }
 '''
+# Relier la base de donnee postgreSQL a notre application
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://postgre:postgres@localhost:5432/multilang_site',
@@ -114,11 +115,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
-
+# les fichiers utilises pour la traduction sont stocker dans ce repertoire
 LOCALE_PATHS = [
     BASE_DIR / 'locale/',
 ]
 
+# Les langues prisent en charge
 LANGUAGES = (
     ('en', _('English')),
     ('fr', _('French')),
@@ -132,7 +134,7 @@ LANGUAGE_CODE = 'en'
 ]# j'ajoute le francais
 '''
 TIME_ZONE = 'UTC'
-
+# Internationalisation
 USE_I18N = True
 
 USE_L10N = True

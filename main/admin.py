@@ -1,5 +1,5 @@
 from django.contrib import admin
 from .models import Articles
 
-# Register your models here.
+# Afficher nos artiches dans la page administrateur
 admin.site.register(Articles)
